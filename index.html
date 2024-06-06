@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+
+  <link rel="stylesheet" href="/style.css">
+
+  <title>Lab 503 CSS HTML</title>
+  <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"
+    integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="sketch.js"></script>
+  <script src="food.js"></script>
+  <script src="snake.js"></script>
+  <script src="p5.sound.js"></script>
+  <h1>Snake Game</h1>
+  <label for="playerName">Enter your name:</label>
+  <input type="text" id="playerName" name="playerName">
+</head>
+
+<body>
+  <div id="wrapperDiv">
+    <div id="headerDiv">
+      <div id="infoDiv">
+        <div class="tile">
+          <h3>Num Segments</h3>
+          <p> Added Segments:
+            <span id="score">0</span>
+          </p>
+        </div>
+        <div class="tile">
+          <h3>Time</h3>
+          <p> Time:
+            <span id="timeTile">0</span>
+          </p>
+        </div>
+        <div class="tile"></div>
+      </div>
+      <div id="timeTile"></div>
+      <div id="playBtn" class="btnDiv">Play</div>
+      <div id="instBtn" class="btnDiv">Instructions</div>
+      <div id="quitBtn" class="btnDiv">Play Again</div>
+      <div id="SkibidiBtn" class="btnDiv">To Website</div>
+    </div>
+
+    <div id="cnvDiv"></div>
+  </div>
+
+</body>
+
+<script>
+  document.getElementById("playBtn").addEventListener("click", () => {
+    if (gameState === 1) { //if in menu and press start... it start//
+      gameState = 2;  //play game//
+      sound2.play(); //click noise//
+      sound4.play(); //starts music//
+    }
+  })
+
+  document.getElementById("instBtn").addEventListener("click", () => {
+    if (showInst === true) { //if it's open and you press it closes//
+      showInst = false;
+    } else if (showInst === false) { //if it's closed and you press it opens//
+      showInst = true; //show instructions//
+    }
+  })
+
+  document.getElementById("quitBtn").addEventListener("click", () => {
+    loadGame(); //reloads the game//
+    gameState = 1; //puts you back to menu//
+    sound2.play(); //click noise//
+    sound4.stop(); //stops music//
+  })
+
+  document.getElementById("SkibidiBtn").addEventListener("click", () =>{
+     window.location.href = "https://www.skibidisunshine.com"//leads to the skibidi website
+      })
+
+
+  const btnDivs = document.querySelectorAll('.btnDiv');
+
+  btnDivs.forEach(btnDiv => {
+
+    btnDiv.addEventListener("mouseover", () => {
+      btnDiv.classList.add("btnCol");
+    })
+
+    btnDiv.addEventListener("mouseout", () => {
+
+      btnDiv.classList.remove("btnCol")
+    })
+
+
+
+  })
+</script>
+
+</html>

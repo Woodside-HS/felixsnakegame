@@ -1,0 +1,87 @@
+body {
+  padding: 10px; /* the space between an element's border and the element's content */
+  background-color: rgb(180, 56, 62);
+  /* BACKROUND */
+}
+
+#wrapperDiv {
+  height: 923px;
+  width: 989px;
+  margin: auto; /* to center an element */
+  background-color: rgb(199, 199, 198);
+  border: solid rgb(255, 255, 255) 12px; /* outline clr */
+  /* ENTIRE THING */
+}
+
+#headerDiv {
+  float:left;
+  height: 101px;
+  width: 978px;
+  background-color: rgb(207, 18, 240);
+  border: solid rgb(255, 255, 255) 12px; /* outline clr */
+  /* TOP BAR */
+}
+
+
+#infoDiv{
+  float:right;
+  float:top;
+  background-color: rgb(226, 251, 2);
+  height: 900px;
+  width: 170px;
+  border: solid rgb(255, 255, 255) 12px; /* outline clr */
+  border-radius: .4%; /* outline rounded edges */
+  /* SIDE BAR */
+}
+
+.tile{
+  float:left;
+  height: 165px;
+  width: 100px;
+  font-size: 12px;
+  margin-top: 95px;
+  margin-left: 30px;;
+  background-color: blueviolet;
+  border: solid black 5px; /* outline clr */
+  border-radius: 25%; /* outline rounded edges */ 
+  /* SIDE COUNTERS */
+}
+
+
+.btnDiv {
+  float:left;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%; /* outline rounded edges */
+  margin: auto; /* to center an element */
+  margin-top: 22px;
+  margin-left: 105px;
+  background-image: url("images/qqqq.gif");  /* to put image on object */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* TOP BUTTONS */
+  
+}
+
+.btnCol{
+  background-image: url(images/co.gif); /* secondary button image */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* TOP BUTTON SECONDARY STATE */
+}
+
+.cnvDiv{
+  float:left;
+  width:800px;
+  height:800px;
+  background-color: aquamarine;
+  margin-top: 20px;
+  margin-left: 20px;
+  /* SNAKE GAME */
+}
+
+
+
+
